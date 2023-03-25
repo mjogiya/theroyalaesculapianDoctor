@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "979355990721",
+    "project_id": "theroyalaesculapian",
+    "storage_bucket": "theroyalaesculapian.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979355990721:android:bcc9512ff0e7794a8e3240",
+        "android_client_info": {
+          "package_name": "com.example.theroyalaesculapiandoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979355990721-6rpn0m9gg42pe04cq00j583iuq76kkov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBStb5aLljxAP7ljPz60Vx8VBQAkUvFeSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979355990721-6rpn0m9gg42pe04cq00j583iuq76kkov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979355990721:android:731e30738708e1a28e3240",
+        "android_client_info": {
+          "package_name": "com.example.tiger.theroyalaesculapian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979355990721-6rpn0m9gg42pe04cq00j583iuq76kkov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBStb5aLljxAP7ljPz60Vx8VBQAkUvFeSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979355990721-6rpn0m9gg42pe04cq00j583iuq76kkov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
