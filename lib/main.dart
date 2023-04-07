@@ -6,7 +6,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MaterialApp(
- // initialRoute: First_Screen(),
+    debugShowCheckedModeBanner: false,
+    // initialRoute: First_Screen(),
     routes: {
       '/': (context) => Splashscreen(),
       //    '/register': (context) => register(),

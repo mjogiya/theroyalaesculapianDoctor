@@ -22,6 +22,7 @@ class _registerState extends State<register> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
             backgroundColor: Color.fromARGB(255, 3, 55, 57),
             appBar: AppBar(
@@ -32,7 +33,7 @@ class _registerState extends State<register> {
                   Navigator.of(context).pop();
                 },
               ),
-              title: Text('Register as Patient'),
+              title: Text('Register as Doctor'),
             ),
             body: Center(
               child: SingleChildScrollView(
@@ -45,7 +46,7 @@ class _registerState extends State<register> {
                   children: <Widget>[
 
                     Image(
-                      image: AssetImage('Logos/patient1.png'),
+                      image: AssetImage('Logos/doctor.png'),
                       height: 200,
                       width: 200,
                     ),
@@ -61,8 +62,7 @@ class _registerState extends State<register> {
                             name = val;
                           });
                         },
-//full name text box
-
+                        //full name text box
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
@@ -74,6 +74,10 @@ class _registerState extends State<register> {
                               borderRadius: BorderRadius.circular(90.0),
                             ),
                             labelText: 'Full Name',
+                            helperText: 'without including DR. in first',
+                            helperStyle: TextStyle(
+                              color: Colors.white, letterSpacing: 2.0
+                            ),
                             labelStyle: TextStyle(
                                 color: Colors.white, letterSpacing: 3.0)),
                       ),

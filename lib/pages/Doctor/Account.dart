@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:theroyalaesculapiandoctor/pages/Doctor/Account/Editprofile.dart';
+import 'package:theroyalaesculapiandoctor/Connection/auth.dart';
 
 class Account extends StatefulWidget {
   const Account({Key? key}) : super(key: key);
@@ -9,6 +11,8 @@ class Account extends StatefulWidget {
 }
 
 class _AccountState extends State<Account> {
+  final AuthService _auth = AuthService();
+  final currentDoc = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +37,7 @@ class _AccountState extends State<Account> {
                 ),
               ),
               SizedBox(height: 10),
-              Text('Mayur Jogiya (Doctor)'),
+              Text('${currentDoc!.email!.toUpperCase()}'),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
@@ -50,25 +54,7 @@ class _AccountState extends State<Account> {
               ),
               const Divider(),
               SizedBox(height: 20),
-              ListTile(
-                leading: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.grey),
-                  child: Icon(
-                    Icons.access_alarm,
-                    color: Colors.black,
-                  ),
-                ),
-                title: Text('Reminders'),
-                trailing: Icon(
-                  Icons.arrow_right,
-                  size: 30,
-                  color: Colors.grey,
-                ),
-              ),
+
               ListTile(
                 leading: Container(
                   width: 40,
@@ -127,6 +113,9 @@ class _AccountState extends State<Account> {
                 ),
               ),
               ListTile(
+                onTap: () async {
+                  await _auth.signOutEmail();
+                },
                 leading: Container(
                   width: 40,
                   height: 40,
